@@ -88,7 +88,7 @@ Demonstrates the simplest possible auth flow:
 Add to your llm-router's `adapters.conf`:
 
 ```
-github.com/TheSlopMachine/llm-router-adapter-demo latest
+github.com/TheSlopMachine/llm-router-adapter-demo main
 ```
 
 Then rebuild llm-router:
@@ -100,8 +100,10 @@ make build
 ### For Development
 
 ```bash
-go get github.com/TheSlopMachine/llm-router-adapter-demo@latest
+go get github.com/TheSlopMachine/llm-router-adapter-demo@main
 ```
+
+`@main` tracks the current tip of the `main` branch. Go still writes the resolved commit as a pseudo-version in `go.mod`, so rerun `go get ...@main` when you want newer code.
 
 ---
 
